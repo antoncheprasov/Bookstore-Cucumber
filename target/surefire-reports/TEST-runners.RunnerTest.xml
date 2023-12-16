@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runners.RunnerTest" time="416.756" tests="94" errors="0" skipped="8" failures="2">
+  <properties>
+    <property name="java.specification.version" value="20"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/anton/IdeaProjects/BookstoreUI-Cucumber/target/test-classes:/Users/anton/IdeaProjects/BookstoreUI-Cucumber/target/classes:/Users/anton/.m2/repository/com/codeborne/selenide/6.17.0/selenide-6.17.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-java/4.11.0/selenium-java-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-api/4.11.0/selenium-api-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.11.0/selenium-chrome-driver-4.11.0.jar:/Users/anton/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.11.0/selenium-chromium-driver-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-json/4.11.0/selenium-json-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.11.0/selenium-manager-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v113/4.11.0/selenium-devtools-v113-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v114/4.11.0/selenium-devtools-v114-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v115/4.11.0/selenium-devtools-v115-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.11.0/selenium-devtools-v85-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.11.0/selenium-edge-driver-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.11.0/selenium-firefox-driver-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-http/4.11.0/selenium-http-4.11.0.jar:/Users/anton/.m2/repository/dev/failsafe/failsafe/3.3.1/failsafe-3.3.1.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.11.0/selenium-ie-driver-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.11.0/selenium-remote-driver-4.11.0.jar:/Users/anton/.m2/repository/io/netty/netty-buffer/4.1.92.Final/netty-buffer-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-codec-http/4.1.92.Final/netty-codec-http-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-codec/4.1.92.Final/netty-codec-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-handler/4.1.92.Final/netty-handler-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-common/4.1.92.Final/netty-common-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.92.Final/netty-transport-classes-epoll-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.92.Final/netty-transport-classes-kqueue-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-native-epoll/4.1.92.Final/netty-transport-native-epoll-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.92.Final/netty-transport-native-kqueue-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.92.Final/netty-transport-native-unix-common-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport/4.1.92.Final/netty-transport-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-resolver/4.1.92.Final/netty-resolver-4.1.92.Final.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-api/1.26.0/opentelemetry-api-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-context/1.26.0/opentelemetry-context-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.26.0/opentelemetry-exporter-logging-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.26.0/opentelemetry-sdk-metrics-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.26.0-alpha/opentelemetry-extension-incubator-1.26.0-alpha.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.26.0-alpha/opentelemetry-sdk-logs-1.26.0-alpha.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-api-logs/1.26.0-alpha/opentelemetry-api-logs-1.26.0-alpha.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.26.0-alpha/opentelemetry-api-events-1.26.0-alpha.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.26.0/opentelemetry-sdk-common-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.26.0/opentelemetry-sdk-extension-autoconfigure-spi-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.26.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.26.0-alpha.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.26.0/opentelemetry-sdk-trace-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.26.0/opentelemetry-sdk-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.26.0-alpha/opentelemetry-semconv-1.26.0-alpha.jar:/Users/anton/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/Users/anton/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/anton/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/Users/anton/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/Users/anton/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/Users/anton/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/Users/anton/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/Users/anton/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/anton/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/Users/anton/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.11.0/selenium-safari-driver-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-support/4.11.0/selenium-support-4.11.0.jar:/Users/anton/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/Users/anton/.m2/repository/com/codeborne/selenide-core/6.17.0/selenide-core-6.17.0.jar:/Users/anton/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/anton/.m2/repository/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar:/Users/anton/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/anton/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/anton/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/anton/.m2/repository/com/google/guava/guava/32.1.2-jre/guava-32.1.2-jre.jar:/Users/anton/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/anton/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/anton/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/anton/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/anton/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/Users/anton/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/anton/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/anton/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-junit4/2.13.1/allure-junit4-2.13.1.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-java-commons/2.13.1/allure-java-commons-2.13.1.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-model/2.13.1/allure-model-2.13.1.jar:/Users/anton/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/Users/anton/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/anton/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/Users/anton/.m2/repository/org/apache/tika/tika-core/1.20/tika-core-1.20.jar:/Users/anton/.m2/repository/org/jooq/joor-java-8/0.9.10/joor-java-8-0.9.10.jar:/Users/anton/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/anton/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-cucumber-jvm/2.13.1/allure-cucumber-jvm-2.13.1.jar:/Users/anton/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/Users/anton/.m2/repository/info/cukes/cucumber-html/0.2.3/cucumber-html-0.2.3.jar:/Users/anton/.m2/repository/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar:/Users/anton/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:/Users/anton/.m2/repository/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-java/6.10.3/cucumber-java-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-core/6.10.3/cucumber-core-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-gherkin/6.10.3/cucumber-gherkin-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.10.3/cucumber-gherkin-messages-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/messages/15.0.0/messages-15.0.0.jar:/Users/anton/.m2/repository/io/cucumber/tag-expressions/3.0.1/tag-expressions-3.0.1.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/anton/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-plugin/6.10.3/cucumber-plugin-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/docstring/6.10.3/docstring-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/html-formatter/13.0.0/html-formatter-13.0.0.jar:/Users/anton/.m2/repository/io/cucumber/create-meta/4.0.0/create-meta-4.0.0.jar:/Users/anton/.m2/repository/org/apiguardian/apiguardian-api/1.1.1/apiguardian-api-1.1.1.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-cucumber6-jvm/2.17.3/allure-cucumber6-jvm-2.17.3.jar:/Users/anton/.m2/repository/io/cucumber/gherkin/18.0.0/gherkin-18.0.0.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-selenide/2.13.1/allure-selenide-2.13.1.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-junit/1.2.6/cucumber-junit-1.2.6.jar:/Users/anton/.m2/repository/org/slf4j/slf4j-simple/2.0.6/slf4j-simple-2.0.6.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="20"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/20.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/anton/IdeaProjects/BookstoreUI-Cucumber/target/surefire/surefirebooter-20231214175239271_3.jar /Users/anton/IdeaProjects/BookstoreUI-Cucumber/target/surefire 2023-12-14T17-52-39_182-jvmRun1 surefire-20231214175239271_1tmp surefire_0-20231214175239271_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/anton/IdeaProjects/BookstoreUI-Cucumber/target/test-classes:/Users/anton/IdeaProjects/BookstoreUI-Cucumber/target/classes:/Users/anton/.m2/repository/com/codeborne/selenide/6.17.0/selenide-6.17.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-java/4.11.0/selenium-java-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-api/4.11.0/selenium-api-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.11.0/selenium-chrome-driver-4.11.0.jar:/Users/anton/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.11.0/selenium-chromium-driver-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-json/4.11.0/selenium-json-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.11.0/selenium-manager-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v113/4.11.0/selenium-devtools-v113-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v114/4.11.0/selenium-devtools-v114-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v115/4.11.0/selenium-devtools-v115-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.11.0/selenium-devtools-v85-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.11.0/selenium-edge-driver-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.11.0/selenium-firefox-driver-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-http/4.11.0/selenium-http-4.11.0.jar:/Users/anton/.m2/repository/dev/failsafe/failsafe/3.3.1/failsafe-3.3.1.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.11.0/selenium-ie-driver-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.11.0/selenium-remote-driver-4.11.0.jar:/Users/anton/.m2/repository/io/netty/netty-buffer/4.1.92.Final/netty-buffer-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-codec-http/4.1.92.Final/netty-codec-http-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-codec/4.1.92.Final/netty-codec-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-handler/4.1.92.Final/netty-handler-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-common/4.1.92.Final/netty-common-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.92.Final/netty-transport-classes-epoll-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.92.Final/netty-transport-classes-kqueue-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-native-epoll/4.1.92.Final/netty-transport-native-epoll-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.92.Final/netty-transport-native-kqueue-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.92.Final/netty-transport-native-unix-common-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport/4.1.92.Final/netty-transport-4.1.92.Final.jar:/Users/anton/.m2/repository/io/netty/netty-resolver/4.1.92.Final/netty-resolver-4.1.92.Final.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-api/1.26.0/opentelemetry-api-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-context/1.26.0/opentelemetry-context-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.26.0/opentelemetry-exporter-logging-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.26.0/opentelemetry-sdk-metrics-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.26.0-alpha/opentelemetry-extension-incubator-1.26.0-alpha.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.26.0-alpha/opentelemetry-sdk-logs-1.26.0-alpha.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-api-logs/1.26.0-alpha/opentelemetry-api-logs-1.26.0-alpha.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.26.0-alpha/opentelemetry-api-events-1.26.0-alpha.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.26.0/opentelemetry-sdk-common-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.26.0/opentelemetry-sdk-extension-autoconfigure-spi-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.26.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.26.0-alpha.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.26.0/opentelemetry-sdk-trace-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.26.0/opentelemetry-sdk-1.26.0.jar:/Users/anton/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.26.0-alpha/opentelemetry-semconv-1.26.0-alpha.jar:/Users/anton/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/Users/anton/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/anton/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/Users/anton/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/Users/anton/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/Users/anton/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/Users/anton/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/Users/anton/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/Users/anton/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/anton/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/Users/anton/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.11.0/selenium-safari-driver-4.11.0.jar:/Users/anton/.m2/repository/org/seleniumhq/selenium/selenium-support/4.11.0/selenium-support-4.11.0.jar:/Users/anton/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/Users/anton/.m2/repository/com/codeborne/selenide-core/6.17.0/selenide-core-6.17.0.jar:/Users/anton/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/anton/.m2/repository/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar:/Users/anton/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/anton/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/anton/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/anton/.m2/repository/com/google/guava/guava/32.1.2-jre/guava-32.1.2-jre.jar:/Users/anton/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/anton/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/anton/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/anton/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/anton/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/Users/anton/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/anton/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/anton/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-junit4/2.13.1/allure-junit4-2.13.1.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-java-commons/2.13.1/allure-java-commons-2.13.1.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-model/2.13.1/allure-model-2.13.1.jar:/Users/anton/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/Users/anton/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/anton/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/Users/anton/.m2/repository/org/apache/tika/tika-core/1.20/tika-core-1.20.jar:/Users/anton/.m2/repository/org/jooq/joor-java-8/0.9.10/joor-java-8-0.9.10.jar:/Users/anton/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/anton/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-cucumber-jvm/2.13.1/allure-cucumber-jvm-2.13.1.jar:/Users/anton/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/Users/anton/.m2/repository/info/cukes/cucumber-html/0.2.3/cucumber-html-0.2.3.jar:/Users/anton/.m2/repository/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar:/Users/anton/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:/Users/anton/.m2/repository/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-java/6.10.3/cucumber-java-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-core/6.10.3/cucumber-core-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-gherkin/6.10.3/cucumber-gherkin-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.10.3/cucumber-gherkin-messages-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/messages/15.0.0/messages-15.0.0.jar:/Users/anton/.m2/repository/io/cucumber/tag-expressions/3.0.1/tag-expressions-3.0.1.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/anton/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-plugin/6.10.3/cucumber-plugin-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/docstring/6.10.3/docstring-6.10.3.jar:/Users/anton/.m2/repository/io/cucumber/html-formatter/13.0.0/html-formatter-13.0.0.jar:/Users/anton/.m2/repository/io/cucumber/create-meta/4.0.0/create-meta-4.0.0.jar:/Users/anton/.m2/repository/org/apiguardian/apiguardian-api/1.1.1/apiguardian-api-1.1.1.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-cucumber6-jvm/2.17.3/allure-cucumber6-jvm-2.17.3.jar:/Users/anton/.m2/repository/io/cucumber/gherkin/18.0.0/gherkin-18.0.0.jar:/Users/anton/.m2/repository/io/qameta/allure/allure-selenide/2.13.1/allure-selenide-2.13.1.jar:/Users/anton/.m2/repository/io/cucumber/cucumber-junit/1.2.6/cucumber-junit-1.2.6.jar:/Users/anton/.m2/repository/org/slf4j/slf4j-simple/2.0.6/slf4j-simple-2.0.6.jar:"/>
+    <property name="allure.results.directory" value="/Users/anton/IdeaProjects/BookstoreUI-Cucumber/target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/anton"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="/usr/local/Cellar/openjdk/20.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/anton/IdeaProjects/BookstoreUI-Cucumber"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/anton/IdeaProjects/BookstoreUI-Cucumber/target/surefire/surefirebooter-20231214175239271_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="20.0.1"/>
+    <property name="user.name" value="anton"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="13.4"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/anton/.m2/repository"/>
+    <property name="cucumber.options" value="--plugin io.qameta.allure.cucumberjvm.AllureCucumberJvm"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/np/cbsnhzd12hb9x84s8clyrpkw0000gn/T/"/>
+    <property name="java.version" value="20.0.1"/>
+    <property name="user.dir" value="/Users/anton/IdeaProjects/BookstoreUI-Cucumber"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/anton/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="20.0.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="64.0"/>
+  </properties>
+  <testcase name="Given I open the Main page" classname="Scenario: Adding books items to User&apos;s Profile" time="0.002">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[main] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702572761091_5606_1
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+Dec 14, 2023 5:52:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 120
+Dec 14, 2023 5:52:45 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 120.0.6099.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.11.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=120.0.6099.71 Platform=mac
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.17.0
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.11.0 build revision: 040bc5406b
+[main] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on mac (cafdd239e3d73f3bf365f6113ad9f93e)
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (cafdd239e3d73f3bf365f6113ad9f93e),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702572761091_5606_1] in 1 [size=1]
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
+]]></system-err>
+  </testcase>
+  <testcase name="Then I push Bookstore button" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I push Login button from Bookstore Page" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="When I input &quot;cucumber1&quot; to username field" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="And input &quot;Qwerty!12&quot; to password field" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="When I push the Login button" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I am on the Bookstore Page" classname="Scenario: Adding books items to User&apos;s Profile" time="0.001"/>
+  <testcase name="When I push the Bookstore Link In Sidebar" classname="Scenario: Adding books items to User&apos;s Profile" time="0.001"/>
+  <testcase name="Then I&apos;m on Bookstore Page" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I&apos;m on Bookstore Page" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I&apos;m on Bookstore Page" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then I push Git Pocket Guide Link" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I on Git Pocket Guide Page" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="When I click Add To Your Collection Button, Book added to my Collection" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="When I click Add To Your Collection Button, Book added to my Collection" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="When I click Back To Book Store Button" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0"/>
+  <testcase name="When I click Back To Book Store Button" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then I push Programming JavaScript Applications Button Link" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0">
+    <failure message="TimeoutException: java.util.concurrent.TimeoutException&#10;Page source: file:/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/reports/tests/1702572865955.0.html&#10;Timeout: 4 s.&#10;Caused by: TimeoutException: java.util.concurrent.TimeoutException" type="TimeoutException"><![CDATA[TimeoutException: java.util.concurrent.TimeoutException
+Page source: file:/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/reports/tests/1702572865955.0.html
+Timeout: 4 s.
+Caused by: TimeoutException: java.util.concurrent.TimeoutException
+	at com.codeborne.selenide.ex.UIAssertionError.wrapToUIAssertionError(UIAssertionError.java:131)
+	at com.codeborne.selenide.ex.UIAssertionError.wrapThrowable(UIAssertionError.java:114)
+	at com.codeborne.selenide.ex.UIAssertionError.wrap(UIAssertionError.java:108)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at steps.BookstoreSteps.iPushProgrammingJavaScriptApplicationsButtonLink(BookstoreSteps.java:38)
+	at ✽.Then I push Programming JavaScript Applications Button Link(BookstoreTest.feature:24)
+Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.4', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cafdd239e3d73f3bf365f6113ad9f93e, clickElement {id=EA74047F3DD0FF505E85B9676DE03C56_element_128}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/np/cbsnhzd12hb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51923}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51923/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (cafdd239e3d73f3bf365f6113ad9f93e)] -> id: see-book-Programming JavaScript Applications]
+Session ID: cafdd239e3d73f3bf365f6113ad9f93e
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.codeborne.selenide.commands.Click.defaultClick(Click.java:97)
+	at com.codeborne.selenide.commands.Click.click(Click.java:54)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:31)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:21)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:163)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at steps.BookstoreSteps.iPushProgrammingJavaScriptApplicationsButtonLink(BookstoreSteps.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 57 more
+]]></failure>
+    <system-err><![CDATA[[main] WARN com.codeborne.selenide.impl.WebPageSourceExtractor - Failed to save page source to 1702572865955.0
+org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.4', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cafdd239e3d73f3bf365f6113ad9f93e, getPageSource {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/np/cbsnhzd12hb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51923}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51923/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cafdd239e3d73f3bf365f6113ad9f93e
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getPageSource(RemoteWebDriver.java:381)
+	at com.codeborne.selenide.impl.WebPageSourceExtractor.extract(WebPageSourceExtractor.java:37)
+	at com.codeborne.selenide.impl.WebPageSourceExtractor.extract(WebPageSourceExtractor.java:31)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.savePageSourceToFile(ScreenShotLaboratory.java:312)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.takeScreenShot(ScreenShotLaboratory.java:133)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.lambda$takeScreenshot$15(ScreenShotLaboratory.java:440)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.ifReportsFolderNotNull(ScreenShotLaboratory.java:530)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.lambda$takeScreenshot$16(ScreenShotLaboratory.java:439)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.ifWebDriverStarted(ScreenShotLaboratory.java:520)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.takeScreenshot(ScreenShotLaboratory.java:438)
+	at com.codeborne.selenide.ex.UIAssertionError.wrapThrowable(UIAssertionError.java:123)
+	at com.codeborne.selenide.ex.UIAssertionError.wrap(UIAssertionError.java:108)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at steps.BookstoreSteps.iPushProgrammingJavaScriptApplicationsButtonLink(BookstoreSteps.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 63 more
+[main] ERROR com.codeborne.selenide.impl.ScreenShotLaboratory - Failed to take screenshot to 1702572865955.0
+org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.4', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cafdd239e3d73f3bf365f6113ad9f93e, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/np/cbsnhzd12hb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51923}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51923/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cafdd239e3d73f3bf365f6113ad9f93e
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at com.codeborne.selenide.impl.WebdriverPhotographer.takeScreenshot(WebdriverPhotographer.java:19)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.savePageImageToFile(ScreenShotLaboratory.java:285)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.takeScreenShot(ScreenShotLaboratory.java:134)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.lambda$takeScreenshot$15(ScreenShotLaboratory.java:440)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.ifReportsFolderNotNull(ScreenShotLaboratory.java:530)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.lambda$takeScreenshot$16(ScreenShotLaboratory.java:439)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.ifWebDriverStarted(ScreenShotLaboratory.java:520)
+	at com.codeborne.selenide.impl.ScreenShotLaboratory.takeScreenshot(ScreenShotLaboratory.java:438)
+	at com.codeborne.selenide.ex.UIAssertionError.wrapThrowable(UIAssertionError.java:123)
+	at com.codeborne.selenide.ex.UIAssertionError.wrap(UIAssertionError.java:108)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at steps.BookstoreSteps.iPushProgrammingJavaScriptApplicationsButtonLink(BookstoreSteps.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 62 more
+[main] WARN io.qameta.allure.selenide.AllureSelenide - Could not get screen shot
+org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=120.0.6099.71)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.4', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cafdd239e3d73f3bf365f6113ad9f93e, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/np/cbsnhzd12hb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51923}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51923/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cafdd239e3d73f3bf365f6113ad9f93e
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at io.qameta.allure.selenide.AllureSelenide.getScreenshotBytes(AllureSelenide.java:89)
+	at io.qameta.allure.selenide.AllureSelenide.lambda$afterEvent$6(AllureSelenide.java:129)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at io.qameta.allure.selenide.AllureSelenide.afterEvent(AllureSelenide.java:122)
+	at com.codeborne.selenide.logevents.SelenideLogger.commitStep(SelenideLogger.java:95)
+	at com.codeborne.selenide.logevents.SelenideLogger.commitStep(SelenideLogger.java:86)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:95)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at steps.BookstoreSteps.iPushProgrammingJavaScriptApplicationsButtonLink(BookstoreSteps.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+[main] WARN io.qameta.allure.selenide.AllureSelenide - Could not get page source
+org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=120.0.6099.71)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.4', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cafdd239e3d73f3bf365f6113ad9f93e, getPageSource {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/np/cbsnhzd12hb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51923}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51923/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cafdd239e3d73f3bf365f6113ad9f93e
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getPageSource(RemoteWebDriver.java:381)
+	at io.qameta.allure.selenide.AllureSelenide.getPageSourceBytes(AllureSelenide.java:100)
+	at io.qameta.allure.selenide.AllureSelenide.lambda$afterEvent$6(AllureSelenide.java:133)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at io.qameta.allure.selenide.AllureSelenide.afterEvent(AllureSelenide.java:122)
+	at com.codeborne.selenide.logevents.SelenideLogger.commitStep(SelenideLogger.java:95)
+	at com.codeborne.selenide.logevents.SelenideLogger.commitStep(SelenideLogger.java:86)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:95)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at steps.BookstoreSteps.iPushProgrammingJavaScriptApplicationsButtonLink(BookstoreSteps.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></system-err>
+  </testcase>
+  <testcase name="" classname="Scenario: Adding books items to User&apos;s Profile" time="0.001">
+    <failure message="TimeoutException: java.util.concurrent.TimeoutException&#10;Page source: file:/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/reports/tests/1702572865955.0.html&#10;Timeout: 4 s.&#10;Caused by: TimeoutException: java.util.concurrent.TimeoutException" type="TimeoutException"><![CDATA[TimeoutException: java.util.concurrent.TimeoutException
+Page source: file:/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/reports/tests/1702572865955.0.html
+Timeout: 4 s.
+Caused by: TimeoutException: java.util.concurrent.TimeoutException
+	at com.codeborne.selenide.ex.UIAssertionError.wrapToUIAssertionError(UIAssertionError.java:131)
+	at com.codeborne.selenide.ex.UIAssertionError.wrapThrowable(UIAssertionError.java:114)
+	at com.codeborne.selenide.ex.UIAssertionError.wrap(UIAssertionError.java:108)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at steps.BookstoreSteps.iPushProgrammingJavaScriptApplicationsButtonLink(BookstoreSteps.java:38)
+	at ✽.Then I push Programming JavaScript Applications Button Link(BookstoreTest.feature:24)
+Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.4', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cafdd239e3d73f3bf365f6113ad9f93e, clickElement {id=EA74047F3DD0FF505E85B9676DE03C56_element_128}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/np/cbsnhzd12hb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51923}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51923/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (cafdd239e3d73f3bf365f6113ad9f93e)] -> id: see-book-Programming JavaScript Applications]
+Session ID: cafdd239e3d73f3bf365f6113ad9f93e
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.codeborne.selenide.commands.Click.defaultClick(Click.java:97)
+	at com.codeborne.selenide.commands.Click.click(Click.java:54)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:31)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:21)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:163)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at steps.BookstoreSteps.iPushProgrammingJavaScriptApplicationsButtonLink(BookstoreSteps.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 57 more
+]]></failure>
+  </testcase>
+  <testcase name="Then I on the Programming JavaScript Applications Page" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="When I push the Profile Link In Sidebar" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then I&apos;m On Profile Page" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then Git Pocket Guide Book Is Displayed in Profile" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then Programming JavaScript Applications Book Is Displayed in Profile" classname="Scenario: Adding books items to User&apos;s Profile" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="Given I open the Main page" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702572761091_5606_1
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on mac (cafdd239e3d73f3bf365f6113ad9f93e)...
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 275 ms
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (null),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702572761091_5606_1] in 1 [size=0]
+[main] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[main] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573101860_5606_1
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+Dec 14, 2023 5:58:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 120
+Dec 14, 2023 5:58:23 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 120.0.6099.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.11.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=120.0.6099.71 Platform=mac
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.17.0
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.11.0 build revision: 040bc5406b
+[main] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on mac (af3b209ec849edb078958fb30b690b25)
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (af3b209ec849edb078958fb30b690b25),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573101860_5606_1] in 1 [size=1]
+]]></system-err>
+  </testcase>
+  <testcase name="Then I push Bookstore button" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I push Login button from Bookstore Page" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="When I input &quot;cucumber1&quot; to username field" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="And input &quot;Qwerty!12&quot; to password field" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="When I push the Login button" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I am on the Bookstore Page" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="When I click Profile Link in Sidebar" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I&apos;m On Profile Page" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I click a Delete Icon to Delete First Book In Profile" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I click on OK button" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I click on OK button" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="Then I click a Delete Icon to Delete Second Book In Profile" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.0"/>
+  <testcase name="" classname="Scenario: Deleting books items from User&apos;s Profile" time="0.22">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573101860_5606_1
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on mac (af3b209ec849edb078958fb30b690b25)...
+[AsyncHttpClient-1-10] WARN org.asynchttpclient.netty.handler.WebSocketHandler - onError
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Dec 14, 2023 5:58:29 PM org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 216 ms
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (null),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573101860_5606_1] in 1 [size=0]
+]]></system-err>
+  </testcase>
+  <testcase name="Given I open the Main page" classname="Scenario: Success login with valid data" time="0.0">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[main] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573109981_5606_1
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+Dec 14, 2023 5:58:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 120
+Dec 14, 2023 5:58:31 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 120.0.6099.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.11.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=120.0.6099.71 Platform=mac
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.17.0
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.11.0 build revision: 040bc5406b
+[main] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on mac (c3d7703a2aafae15f3fe4746b77b5154)
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (c3d7703a2aafae15f3fe4746b77b5154),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573109981_5606_1] in 1 [size=1]
+]]></system-err>
+  </testcase>
+  <testcase name="Then I push Bookstore button" classname="Scenario: Success login with valid data" time="0.0"/>
+  <testcase name="Then I push Login button from Bookstore Page" classname="Scenario: Success login with valid data" time="0.0"/>
+  <testcase name="When I input &quot;cucumber1&quot; to username field" classname="Scenario: Success login with valid data" time="0.0"/>
+  <testcase name="And input &quot;Qwerty!12&quot; to password field" classname="Scenario: Success login with valid data" time="0.0"/>
+  <testcase name="When I push the Login button" classname="Scenario: Success login with valid data" time="0.0"/>
+  <testcase name="Then I am on the Bookstore Page" classname="Scenario: Success login with valid data" time="0.0"/>
+  <testcase name="" classname="Scenario: Success login with valid data" time="0.204">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573109981_5606_1
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on mac (c3d7703a2aafae15f3fe4746b77b5154)...
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 202 ms
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (null),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573109981_5606_1] in 1 [size=0]
+]]></system-err>
+  </testcase>
+  <testcase name="Given I open the Main page" classname="| cucumber2 | Qwerty!12 | Invalid username or password! |" time="0.0">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[main] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573117605_5606_1
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+Dec 14, 2023 5:58:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 120
+Dec 14, 2023 5:58:38 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 120.0.6099.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.11.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=120.0.6099.71 Platform=mac
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.17.0
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.11.0 build revision: 040bc5406b
+[main] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on mac (b0ad85ba0df542c41a12956d1505264e)
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (b0ad85ba0df542c41a12956d1505264e),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573117605_5606_1] in 1 [size=1]
+]]></system-err>
+  </testcase>
+  <testcase name="Then I push Bookstore button" classname="| cucumber2 | Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="Then I push Login button from Bookstore Page" classname="| cucumber2 | Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="When I input &quot;cucumber2&quot; to username field" classname="| cucumber2 | Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="And input &quot;Qwerty!12&quot; to password field" classname="| cucumber2 | Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="When I push the Login button" classname="| cucumber2 | Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="Then The error message &quot;Invalid username or password!&quot; is displayed" classname="| cucumber2 | Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="" classname="| cucumber2 | Qwerty!12 | Invalid username or password! |" time="0.212">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573117605_5606_1
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on mac (b0ad85ba0df542c41a12956d1505264e)...
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 207 ms
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (null),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573117605_5606_1] in 1 [size=0]
+]]></system-err>
+  </testcase>
+  <testcase name="Given I open the Main page" classname="| cucumber1 | 12Qwerty!12 | Invalid username or password! |" time="0.0">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[main] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573124891_5606_1
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+Dec 14, 2023 5:58:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 120
+Dec 14, 2023 5:58:45 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 120.0.6099.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.11.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=120.0.6099.71 Platform=mac
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.17.0
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.11.0 build revision: 040bc5406b
+[main] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on mac (99ff8063807aee4fb8ef554fa0086bc9)
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (99ff8063807aee4fb8ef554fa0086bc9),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573124891_5606_1] in 1 [size=1]
+]]></system-err>
+  </testcase>
+  <testcase name="Then I push Bookstore button" classname="| cucumber1 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="Then I push Login button from Bookstore Page" classname="| cucumber1 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="When I input &quot;cucumber1&quot; to username field" classname="| cucumber1 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="And input &quot;12Qwerty!12&quot; to password field" classname="| cucumber1 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="When I push the Login button" classname="| cucumber1 | 12Qwerty!12 | Invalid username or password! |" time="0.001"/>
+  <testcase name="Then The error message &quot;Invalid username or password!&quot; is displayed" classname="| cucumber1 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="" classname="| cucumber1 | 12Qwerty!12 | Invalid username or password! |" time="0.225">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573124891_5606_1
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on mac (99ff8063807aee4fb8ef554fa0086bc9)...
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 223 ms
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (null),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573124891_5606_1] in 1 [size=0]
+]]></system-err>
+  </testcase>
+  <testcase name="Given I open the Main page" classname="| cucumber2 | 12Qwerty!12 | Invalid username or password! |" time="0.0">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[main] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573131761_5606_1
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+Dec 14, 2023 5:58:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 120
+Dec 14, 2023 5:58:52 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 120.0.6099.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.11.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=120.0.6099.71 Platform=mac
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.17.0
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.11.0 build revision: 040bc5406b
+[main] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on mac (2e2b5604088f501bd74425c466fbe876)
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (2e2b5604088f501bd74425c466fbe876),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573131761_5606_1] in 1 [size=1]
+]]></system-err>
+  </testcase>
+  <testcase name="Then I push Bookstore button" classname="| cucumber2 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="Then I push Login button from Bookstore Page" classname="| cucumber2 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="When I input &quot;cucumber2&quot; to username field" classname="| cucumber2 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="And input &quot;12Qwerty!12&quot; to password field" classname="| cucumber2 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="When I push the Login button" classname="| cucumber2 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="Then The error message &quot;Invalid username or password!&quot; is displayed" classname="| cucumber2 | 12Qwerty!12 | Invalid username or password! |" time="0.0"/>
+  <testcase name="" classname="| cucumber2 | 12Qwerty!12 | Invalid username or password! |" time="0.219">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573131761_5606_1
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on mac (2e2b5604088f501bd74425c466fbe876)...
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 217 ms
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (null),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573131761_5606_1] in 1 [size=0]
+]]></system-err>
+  </testcase>
+  <testcase name="Given I open the Main page" classname="Scenario: Success logout after login with valid data" time="0.0">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[main] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573139195_5606_1
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+Dec 14, 2023 5:59:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 120
+Dec 14, 2023 5:59:00 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 120.0.6099.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.11.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=120.0.6099.71 Platform=mac
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.17.0
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.11.0 build revision: 040bc5406b
+[main] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on mac (fed549dafa9f0ce07d8ee12444de8288)
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (fed549dafa9f0ce07d8ee12444de8288),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573139195_5606_1] in 1 [size=1]
+]]></system-err>
+  </testcase>
+  <testcase name="Then I push Bookstore button" classname="Scenario: Success logout after login with valid data" time="0.0"/>
+  <testcase name="Then I push Login button from Bookstore Page" classname="Scenario: Success logout after login with valid data" time="0.0"/>
+  <testcase name="When I input &quot;cucumber1&quot; to username field" classname="Scenario: Success logout after login with valid data" time="0.0"/>
+  <testcase name="And input &quot;Qwerty!12&quot; to password field" classname="Scenario: Success logout after login with valid data" time="0.0"/>
+  <testcase name="When I push the Login button" classname="Scenario: Success logout after login with valid data" time="0.0"/>
+  <testcase name="Then I am on the Bookstore Page" classname="Scenario: Success logout after login with valid data" time="0.0"/>
+  <testcase name="When I click the Logout Link" classname="Scenario: Success logout after login with valid data" time="0.0"/>
+  <testcase name="Then I&apos;m on Login Page" classname="Scenario: Success logout after login with valid data" time="0.0"/>
+  <testcase name="" classname="Scenario: Success logout after login with valid data" time="0.215">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573139195_5606_1
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on mac (fed549dafa9f0ce07d8ee12444de8288)...
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 212 ms
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (null),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573139195_5606_1] in 1 [size=0]
+]]></system-err>
+  </testcase>
+  <testcase name="Given I open the Main page" classname="Scenario: Checking Navigation In Sidebar" time="0.0">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[main] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573166931_5606_1
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[main] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+Dec 14, 2023 5:59:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 120
+Dec 14, 2023 5:59:28 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 120.0.6099.71. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.11.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=120.0.6099.71 Platform=mac
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.17.0
+[main] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.11.0 build revision: 040bc5406b
+[main] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on mac (7f458e15389ea9c80170e77cb048a58f)
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (7f458e15389ea9c80170e77cb048a58f),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573166931_5606_1] in 1 [size=1]
+]]></system-err>
+  </testcase>
+  <testcase name="Then I push Bookstore button" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="Then I push Login button from Bookstore Page" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="When I input &quot;cucumber1&quot; to username field" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="And input &quot;Qwerty!12&quot; to password field" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="When I push the Login button" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="Then I am on the Bookstore Page" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="Then I am on the Bookstore Page" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="When I push the Login Link in Sidebar" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="Then I&apos;m on Login Page" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="When I push the Bookstore Link In Sidebar" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="When I push the Profile Link In Sidebar" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="Then I&apos;m On Profile Page" classname="Scenario: Checking Navigation In Sidebar" time="0.0"/>
+  <testcase name="" classname="Scenario: Checking Navigation In Sidebar" time="0.154">
+    <system-err><![CDATA[[main] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: /Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573166931_5606_1
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on mac (7f458e15389ea9c80170e77cb048a58f)...
+[main] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 151 ms
+[main] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (null),proxy=null,downloadsFolder=/Users/anton/IdeaProjects/BookstoreUI-Cucumber/build/downloads/1702573166931_5606_1] in 1 [size=0]
+]]></system-err>
+  </testcase>
+</testsuite>
